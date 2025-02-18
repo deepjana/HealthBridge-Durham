@@ -1,0 +1,33 @@
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import LanguageSelector from "./components/LanguageSelector";
+import MentalHealthHub from "./pages/MentalHealthHub";
+import TrustBuilding from "./pages/TrustBuilding";
+import TransparencyDashboard from "./pages/TransparencyDashboard";
+import PreventiveCare from "./pages/PreventiveCare";
+import CommunityHubs from "./pages/CommunityHubs";
+import FloatingHelpButton from "./components/FloatingHelpButton";
+import VoiceNavigation from "./components/VoiceNavigation";
+
+function App() {
+  return (
+    <Router>
+      <div className="app-container">
+        <FloatingHelpButton />
+        <VoiceNavigation />
+        <LanguageSelector />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/mental-health" element={<MentalHealthHub />} />
+          <Route path="/trust" element={<TrustBuilding />} />
+          <Route path="/transparency" element={<TransparencyDashboard />} />
+          <Route path="/preventive-care" element={<PreventiveCare />} />
+          <Route path="/community-hubs" element={<CommunityHubs />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
+
+export default App;
