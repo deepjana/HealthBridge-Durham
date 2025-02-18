@@ -1,0 +1,96 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+header {
+  background-color: #005eb8; /* NHS Blue */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+#language-detection {
+  padding: 10px;
+  text-align: center;
+  background-color: #e8e8e8;
+}
+
+#mood-tracker {
+  padding: 20px;
+  text-align: center;
+}
+
+.mood-options button {
+  font-size: 1.5em;
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#mood-response {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#nhs-content {
+  padding: 20px;
+}
+
+.nhs-verified {
+  color: #005eb8;
+  font-weight: bold;
+}
+
+#help-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+#help-button button {
+  background-color: #005eb8;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+#help-menu {
+  display: none;
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#help-menu button {
+  display: block;
+  margin: 5px 0;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  background-color: #f4f4f9;
+  border: none;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
