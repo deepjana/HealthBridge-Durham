@@ -1,33 +1,55 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import LanguageSelector from "./components/LanguageSelector";
-import MentalHealthHub from "./pages/MentalHealthHub";
-import TrustBuilding from "./pages/TrustBuilding";
-import TransparencyDashboard from "./pages/TransparencyDashboard";
-import PreventiveCare from "./pages/PreventiveCare";
-import CommunityHubs from "./pages/CommunityHubs";
-import FloatingHelpButton from "./components/FloatingHelpButton";
-import VoiceNavigation from "./components/VoiceNavigation";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthBridge Durham</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>HealthBridge Durham</h1>
+    <p>Your Health, Your Voice, Your Community</p>
+  </header>
 
-function App() {
-  return (
-    <Router>
-      <div className="app-container">
-        <FloatingHelpButton />
-        <VoiceNavigation />
-        <LanguageSelector />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/mental-health" element={<MentalHealthHub />} />
-          <Route path="/trust" element={<TrustBuilding />} />
-          <Route path="/transparency" element={<TransparencyDashboard />} />
-          <Route path="/preventive-care" element={<PreventiveCare />} />
-          <Route path="/community-hubs" element={<CommunityHubs />} />
-        </Routes>
-      </div>
-    </Router>
-  );
-}
+  <!-- Language Auto-Detection -->
+  <div id="language-detection">
+    <p>Language: <span id="detected-language">Detecting...</span></p>
+  </div>
 
-export default App;
+  <!-- Mood Tracker -->
+  <section id="mood-tracker">
+    <h2>How are you feeling today?</h2>
+    <div class="mood-options">
+      <button id="happy">😊 Happy</button>
+      <button id="neutral">😐 Neutral</button>
+      <button id="stressed">😔 Stressed</button>
+    </div>
+    <p id="mood-response"></p>
+  </section>
+
+  <!-- NHS-Verified Content -->
+  <section id="nhs-content">
+    <h2>NHS-Verified Health Guides</h2>
+    <ul>
+      <li><a href="#">Flu Jab Guide</a> <span class="nhs-verified">NHS Verified</span></li>
+      <li><a href="#">Diabetes Management</a> <span class="nhs-verified">NHS Verified</span></li>
+      <li><a href="#">Mental Health Support</a> <span class="nhs-verified">NHS Verified</span></li>
+    </ul>
+  </section>
+
+  <!-- Floating "Need Help?" Button -->
+  <div id="help-button">
+    <button onclick="openHelpMenu()">Need Help?</button>
+    <div id="help-menu" class="hidden">
+      <button onclick="connectToNHS111()">Chat with NHS 111</button>
+      <button onclick="connectToAdvocate()">Connect to Local Advocate</button>
+      <button onclick="callEmergency()">Emergency Services</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
